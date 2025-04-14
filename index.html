@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymCore AI</title>
+    <link rel="stylesheet" href="./cs/menu.css">
+    <script defer src="js/menu.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/logo.png" alt="Logo" id="header-logo">
+        <div id="header-buttons">
+            <button id="header-sing-in-button">Sing in</button>
+            <button id="header-create-account-button">Create account</button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <button class="sidebar-button" onclick="renderHome()">
+            <div class="sidebar-button-div">
+                <img src="img/home.png" alt="Home" class="sidebar-button-image">
+                <div class="sidebar-button-text">Home</div>
+            </div>
+        </button>
+        <button class="sidebar-button" onclick="renderExercises()">
+            <div class="sidebar-button-div">
+                <img src="img/weights.png" alt="Home" class="sidebar-button-image">
+                <div class="sidebar-button-text">Exercises</div>
+            </div>
+        </button>
+        <button class="sidebar-button" onclick="renderSettings()">
+            <div class="sidebar-button-div">
+                <img src="img/settings.png" alt="Home" class="sidebar-button-image">
+                <div class="sidebar-button-text">Settings</div>
+            </div>
+        </button>
+    </div>
+    <div id="content">
+        <!-- Home -->
+        <img id="home-wallpaper-img" src="img/home-wallpaper.jpeg">
+        <!-- Exercises -->
+        <div id="exercises-overflow-div">
+            <div id="exercises-grid">
+                <!-- Plank -->
+                <div class="exercise-div" onclick="renderConfigureStatic('Plank', 'plank.html')">
+                    <img class="exercise-img" src="img/plank.jpeg">
+                    <div class="exercise-title">Plank</div>
+                </div>
+                <!-- Push Up -->
+                <div class="exercise-div" onclick="renderConfigureDynamic('Push Up', 'push_up.html')">
+                    <img class="exercise-img" src="img/push_up.jpg">
+                    <div class="exercise-title">Push Up</div>
+                </div>
+            </div>
+        </div>
+        <!-- Configure Exercise -->
+        <div id="conf-div">
+            <label id="conf-title">test</label>
+            <div id="seconds-div" class="conf-element-div">
+                <label id="seconds-label" class="conf-element-label">Seconds: </label>
+                <input id="seconds-range" class="conf-element-range" type="range">
+            </div>
+            <div id="reps-div" class="conf-element-div">
+                <label id="reps-label" class="conf-element-label">Reps: </label>
+                <input id="reps-range" class="conf-element-range" type="range">
+            </div>
+            <div class="conf-element-div">
+                <label id="sets-label" class="conf-element-label">Sets: </label>
+                <input id="sets-range" class="conf-element-range" type="range">
+            </div>
+            <div class="conf-element-div">
+                <label id="pause-label" class="conf-element-label">Pause: </label>
+                <input id="pause-range" class="conf-element-range" type="range">
+            </div>
+            <img id="start-button" src="img/start-button.png">
+        </div>
+        <!-- Settings -->
+        <div id="settings-div">
+            <div class="settings-element-div">
+                <label class="settings-label">Camera Resolution</label>
+                <select id="select-cam-res" class="settings-select">
+                    <option value="640x360">640x360</option>
+                    <option value="960x540">960x540</option>
+                    <option value="1280x720">1280x720</option>
+                </select>
+            </div>
+            <div class="settings-element-div">
+                <label class="settings-label">Detection Accuracy</label>
+                <select id="select-det-acc" class="settings-select">
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div class="settings-element-div">
+                <label class="settings-label">Mirror</label>
+                <select id="select-mirror" class="settings-select">
+                    <option value="False">False</option>
+                    <option value="True">True</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

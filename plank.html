@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="cs/exercise.css">
+    <script defer src="./js/util.js"></script>
+    <script defer src="./js/plank.js"></script>
+    <script defer src="./js/detection.js"></script>
+  </head>
+
+  <body>
+    <img id="info-label-icon" src="img/info.png" alt="Info: ">
+    <label id="info-label" class="label-text"></label>
+    <label id="reps-seconds-label" class="label-text"></label>
+    <label id="sets-label" class="label-text"></label>
+    <a href="index.html">
+        <img id="exit-button" src="img/exit.png" alt="Exit">
+    </a>
+    <canvas id="output"></canvas>
+  </body>
+</html>
